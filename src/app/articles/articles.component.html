@@ -1,0 +1,13 @@
+<mat-card>
+<mat-card-title>NY Times Most Popular Articles</mat-card-title>
+</mat-card>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let article of articles">
+    <mat-icon mat-list-icon>
+        <img src="{{article.media[0]['media-metadata'][0].url}}" alt="image" height="30px"/>
+    </mat-icon>
+    <h4 mat-line>{{article.title}}</h4>
+    <p mat-line>{{ article.byline }}</p>
+    <p mat-line> {{ article.published_date | date: 'yyyy-MM-dd' }} </p>  
+  </mat-list-item>
+</mat-list>
